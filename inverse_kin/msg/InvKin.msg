@@ -1,0 +1,3 @@
+geometry_msgs/Pose scara_pose
+geometry_msgs/Point ee_pos
+geometry_msgs/Quaternion ee_angl
