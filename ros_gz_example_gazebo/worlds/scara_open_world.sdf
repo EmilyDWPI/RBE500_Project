@@ -1,0 +1,146 @@
+<?xml version='1.0' ?>
+<!--
+  Try sending commands:
+    ign topic -t "/model/scara/cmd_vel" -m ignition.msgs.Twist -p "linear: {x: 1.0}, angular: {z: -0.1}"
+    ros2 topic pub /scara/cmd_vel geometry_msgs/msg/Twist "{linear: {x: 5.0, y: 0.0, z: 0.0}, angular: {x: 0.0, y: 0.0, z: -0.1}}"
+  Listen to odometry:
+    ign topic -e -t /model/scara/odometry
+    ros2 topic echo /model/scara/odometry
+-->
+<sdf version='1.8'>
+    <world name='scara_world'>
+        <plugin
+            filename='ignition-gazebo-physics-system'
+            name='ignition::gazebo::systems::Physics'>
+        </plugin>
+        <plugin
+            filename="ignition-gazebo-sensors-system"
+            name="ignition::gazebo::systems::Sensors">
+            <render_engine>ogre2</render_engine>
+        </plugin>
+        <plugin
+            filename='ignition-gazebo-user-commands-system'
+            name='ignition::gazebo::systems::UserCommands'>
+        </plugin>
+        <plugin
+            filename='ignition-gazebo-scene-broadcaster-system'
+            name='ignition::gazebo::systems::SceneBroadcaster'>
+        </plugin>
+        <plugin
+            filename="BasicSystem"
+            name="ros_gz_example_gazebo::BasicSystem">
+        </plugin>
+        <plugin
+            filename="FullSystem"
+            name="ros_gz_example_gazebo::FullSystem">
+        </plugin>
+
+        <light type='directional' name='sun'>
+            <cast_shadows>true</cast_shadows>
+            <pose>0 0 10 0 0 0</pose>
+            <diffuse>0.8 0.8 0.8 1</diffuse>
+            <specular>0.2 0.2 0.2 1</specular>
+            <attenuation>
+                <range>1000</range>
+                <constant>0.9</constant>
+                <linear>0.01</linear>
+                <quadratic>0.001</quadratic>
+            </attenuation>
+            <direction>-0.5 0.1 -0.9</direction>
+        </light>
+
+        <model name='ground_plane'>
+            <static>true</static>
+            <link name='link'>
+                <collision name='collision'>
+                <geometry>
+                    <plane>
+                    <normal>0 0 1</normal>
+                    </plane>
+                </geometry>
+                </collision>
+                <visual name='visual'>
+                <geometry>
+                    <plane>
+                    <normal>0 0 1</normal>
+                    <size>100 100</size>
+                    </plane>
+                </geometry>
+                <material>
+                    <ambient>0.8 0.8 0.8 1</ambient>
+                    <diffuse>0.8 0.8 0.8 1</diffuse>
+                    <specular>0.8 0.8 0.8 1</specular>
+                </material>
+                </visual>
+            </link>
+        </model>
+
+        <model name='scara' canonical_link='arm_base'>
+            <pose>0 0 0 0 0 0</pose>
+            <include merge="true">
+                <uri>package://ros_gz_example_description/models/scara_open</uri>
+            </include>
+
+            <plugin
+                filename="ignition-gazebo-pose-publisher-system"
+                name="ignition::gazebo::systems::PosePublisher">
+                <publish_link_pose>true</publish_link_pose>
+                <use_pose_vector_msg>true</use_pose_vector_msg>
+                <static_publisher>true</static_publisher>
+                <static_update_frequency>1</static_update_frequency>
+                <topic>/model/scara/pose</topic>
+            </plugin>
+            <plugin
+                filename="libignition-gazebo-joint-position-controller-system.so" 
+                name="ignition::gazebo::systems::JointPositionController">
+                <joint_name>arm_shoulder_pan_joint</joint_name>
+                <p_gain>10000</p_gain>
+                <d_gain>500</d_gain>
+                <i_gain>0</i_gain>
+                <i_min>-1</i_min>
+                <i_max>1</i_max>
+                <cmd_min>-87</cmd_min>
+                <cmd_max>87</cmd_max>
+                <initial_position>1.5</initial_position> <!-- Initial position for arm shoulder pan joint, verifies functionality -->
+
+            </plugin>
+            <plugin 
+                filename="libignition-gazebo-joint-position-controller-system.so" 
+                name="ignition::gazebo::systems::JointPositionController">
+                <joint_name>arm_elbow_pan_joint</joint_name>
+                <p_gain>10000</p_gain>
+                <d_gain>500</d_gain>
+                <i_gain>0</i_gain>
+                <i_min>-1</i_min>
+                <i_max>1</i_max>
+                <cmd_min>-87</cmd_min>
+                <cmd_max>87</cmd_max>
+                <initial_position>-1</initial_position> <!-- Initial position for arm shoulder pan joint, verifies functionality -->
+            </plugin>
+            <plugin 
+                filename="ignition-gazebo-joint-position-controller-system" 
+                name="ignition::gazebo::systems::JointPositionController">
+                <joint_name>arm_wrist_lift_joint</joint_name>
+                <p_gain>10000</p_gain>
+                <d_gain>500</d_gain>
+                <i_gain>500</i_gain>
+                <i_min>-1</i_min>
+                <i_max>1</i_max>
+                <cmd_min>-0.8</cmd_min>
+                <cmd_max>0.1</cmd_max>
+                <initial_position>-0.4</initial_position> <!-- Initial position for the wrist lift joint, verifies functionality -->
+            </plugin>
+            <plugin
+                filename="ignition-gazebo-joint-state-publisher-system" 
+                name="ignition::gazebo::systems::JointStatePublisher">
+            </plugin>
+            <plugin
+                filename="ignition-gazebo-odometry-publisher-system"
+                name="ignition::gazebo::systems::OdometryPublisher">
+                <odom_frame>scara/odom</odom_frame>
+                <robot_base_frame>scara</robot_base_frame>
+                <topic>/model/scara/odometry</topic>
+            </plugin>
+        </model>
+    </world>
+</sdf>
