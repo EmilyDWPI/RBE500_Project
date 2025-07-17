@@ -1,0 +1,31 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from inverse_kin/srv/InvKin.srv
+// generated code does not contain a copyright notice
+
+
+module inverse_kin {
+  module srv {
+    struct InvKin_Request {
+      double x;
+
+      double y;
+
+      double z;
+
+      double quat_x;
+
+      double quat_y;
+
+      double quat_z;
+
+      double quat_w;
+    };
+    struct InvKin_Response {
+      double q1;
+
+      double q2;
+
+      double q3;
+    };
+  };
+};

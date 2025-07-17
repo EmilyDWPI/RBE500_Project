@@ -1,0 +1,4 @@
+[console_scripts]
+client = inverse_kinematics.client_member_function:main
+service = inverse_kinematics.service_member_function:main
+

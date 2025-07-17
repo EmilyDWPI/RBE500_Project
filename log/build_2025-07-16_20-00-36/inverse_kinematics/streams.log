@@ -1,0 +1,23 @@
+[1.028s] Invoking command in '/home/jaboy/Documents/RBE500_Project/RBE500_Project/inverse_kinematics': AMENT_PREFIX_PATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kin:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kin:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kin/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kinematics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kinematics/lib/python3.10/site-packages:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kin/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/inverse_kinematics build --build-base /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kinematics/build install --record /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kinematics/install.log --single-version-externally-managed install_data
+[1.393s] running egg_info
+[1.393s] writing ../build/inverse_kinematics/inverse_kinematics.egg-info/PKG-INFO
+[1.393s] writing dependency_links to ../build/inverse_kinematics/inverse_kinematics.egg-info/dependency_links.txt
+[1.393s] writing entry points to ../build/inverse_kinematics/inverse_kinematics.egg-info/entry_points.txt
+[1.393s] writing requirements to ../build/inverse_kinematics/inverse_kinematics.egg-info/requires.txt
+[1.393s] writing top-level names to ../build/inverse_kinematics/inverse_kinematics.egg-info/top_level.txt
+[1.395s] reading manifest file '../build/inverse_kinematics/inverse_kinematics.egg-info/SOURCES.txt'
+[1.395s] adding license file 'LICENSE'
+[1.395s] writing manifest file '../build/inverse_kinematics/inverse_kinematics.egg-info/SOURCES.txt'
+[1.395s] running build
+[1.395s] running build_py
+[1.396s] running install
+[1.396s] running install_lib
+[1.398s] running install_data
+[1.398s] running install_egg_info
+[1.400s] removing '/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kinematics/lib/python3.10/site-packages/inverse_kinematics-0.0.0-py3.10.egg-info' (and everything under it)
+[1.401s] Copying ../build/inverse_kinematics/inverse_kinematics.egg-info to /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kinematics/lib/python3.10/site-packages/inverse_kinematics-0.0.0-py3.10.egg-info
+[1.401s] running install_scripts
+[1.428s] Installing client script to /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kinematics/lib/inverse_kinematics
+[1.428s] Installing service script to /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kinematics/lib/inverse_kinematics
+[1.428s] writing list of installed files to '/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kinematics/install.log'
+[1.445s] Invoked command in '/home/jaboy/Documents/RBE500_Project/RBE500_Project/inverse_kinematics' returned '0': AMENT_PREFIX_PATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kin:${AMENT_PREFIX_PATH} CMAKE_PREFIX_PATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kin:${CMAKE_PREFIX_PATH} LD_LIBRARY_PATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kin/lib:${LD_LIBRARY_PATH} PYTHONPATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kinematics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kinematics/lib/python3.10/site-packages:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kin/local/lib/python3.10/dist-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/inverse_kinematics build --build-base /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kinematics/build install --record /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kinematics/install.log --single-version-externally-managed install_data

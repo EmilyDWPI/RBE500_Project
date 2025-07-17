@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/msg.idl.em
+// with input from inverse_kin/msg/InvKin.msg
+// generated code does not contain a copyright notice
+
+#include "geometry_msgs/msg/Point.idl"
+#include "geometry_msgs/msg/Pose.idl"
+#include "geometry_msgs/msg/Quaternion.idl"
+
+module inverse_kin {
+  module msg {
+    struct InvKin {
+      geometry_msgs::msg::Pose scara_pose;
+
+      geometry_msgs::msg::Point ee_pos;
+
+      geometry_msgs::msg::Quaternion ee_angl;
+    };
+  };
+};

@@ -1,0 +1,10 @@
+{
+  "package_name": "inverse_kin",
+  "non_idl_tuples": [
+    "/home/jaboy/Documents/RBE500_Project/RBE500_Project/inverse_kin:msg/Num.msg",
+    "/home/jaboy/Documents/RBE500_Project/RBE500_Project/inverse_kin:msg/Sphere.msg",
+    "/home/jaboy/Documents/RBE500_Project/RBE500_Project/inverse_kin:msg/InvKin.msg",
+    "/home/jaboy/Documents/RBE500_Project/RBE500_Project/inverse_kin:srv/InvKin.srv",
+    "/home/jaboy/Documents/RBE500_Project/RBE500_Project/inverse_kin:srv/AddThreeInts.srv"
+  ]
+}

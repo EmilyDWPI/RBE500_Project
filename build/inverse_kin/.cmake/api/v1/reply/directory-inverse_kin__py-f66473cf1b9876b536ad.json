@@ -1,0 +1,14 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : [],
+		"files" : [],
+		"nodes" : []
+	},
+	"installers" : [],
+	"paths" : 
+	{
+		"build" : "inverse_kin__py",
+		"source" : "/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kin/inverse_kin__py"
+	}
+}
