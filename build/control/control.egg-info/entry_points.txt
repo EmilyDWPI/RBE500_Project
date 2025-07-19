@@ -1,0 +1,4 @@
+[console_scripts]
+client = control.position_controller_client:main
+service = control.position_controller_service:main
+
