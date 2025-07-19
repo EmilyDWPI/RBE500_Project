@@ -239,7 +239,7 @@
                 </material>
             </visual>
         </link>
-        <joint name='arm_shoulder_pan_joint' type='revolute'>
+        <joint name='arm_shoulder_pan_joint' type='fixed'> <!-- fixed for part 2, usually revolute -->
             <parent>arm_base</parent>
             <child>arm_shoulder_pan</child>
             <axis>
@@ -271,7 +271,7 @@
                 <use_parent_model_frame>true</use_parent_model_frame>
             </axis>
         </joint>
-        <joint name='arm_wrist_lift_joint' type='prismatic'>
+        <joint name='arm_wrist_lift_joint' type='fixed'> <!-- fixed for part 2, usually prismatic -->
             <parent>arm_elbow_pan</parent>
             <child>arm_wrist_lift</child>
             <axis>
