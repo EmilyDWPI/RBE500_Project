@@ -8,4 +8,7 @@ setup.py
 ../build/control/control.egg-info/requires.txt
 ../build/control/control.egg-info/top_level.txt
 ../build/control/control.egg-info/zip-safe
+control/__init__.py
+control/position_controller_client.py
+control/position_controller_service.py
 resource/control

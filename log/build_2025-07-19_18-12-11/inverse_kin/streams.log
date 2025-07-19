@@ -1,0 +1,88 @@
+[0.119s] Invoking command in '/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kin': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/inverse_kinematics:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/forward_kinematics:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control:/home/jaboy/ros2_humble/install/rqt_bag_plugins:/home/jaboy/ros2_humble/install/rqt_bag:/home/jaboy/ros2_humble/install/launch_testing_examples:/home/jaboy/ros2_humble/install/ros2bag:/home/jaboy/ros2_humble/install/tracetools_test:/home/jaboy/ros2_humble/install/tracetools_launch:/home/jaboy/ros2_humble/install/topic_monitor:/home/jaboy/ros2_humble/install/tf2_tools:/home/jaboy/ros2_humble/install/examples_tf2_py:/home/jaboy/ros2_humble/install/tf2_ros_py:/home/jaboy/ros2_humble/install/sros2:/home/jaboy/ros2_humble/install/rqt_topic:/home/jaboy/ros2_humble/install/rqt_srv:/home/jaboy/ros2_humble/install/rqt_shell:/home/jaboy/ros2_humble/install/rqt_service_caller:/home/jaboy/ros2_humble/install/rqt_reconfigure:/home/jaboy/ros2_humble/install/rqt_py_console:/home/jaboy/ros2_humble/install/rqt_publisher:/home/jaboy/ros2_humble/install/rqt_plot:/home/jaboy/ros2_humble/install/rqt_action:/home/jaboy/ros2_humble/install/rqt_msg:/home/jaboy/ros2_humble/install/rqt_console:/home/jaboy/ros2_humble/install/rqt:/home/jaboy/ros2_humble/install/rqt_graph:/home/jaboy/ros2_humble/install/rqt_gui_py:/home/jaboy/ros2_humble/install/rqt_gui:/home/jaboy/ros2_humble/install/ros2trace:/home/jaboy/ros2_humble/install/ros2topic:/home/jaboy/ros2_humble/install/ros2test:/home/jaboy/ros2_humble/install/ros2component:/home/jaboy/ros2_humble/install/ros2param:/home/jaboy/ros2_humble/install/ros2lifecycle:/home/jaboy/ros2_humble/install/ros2service:/home/jaboy/ros2_humble/install/ros2run:/home/jaboy/ros2_humble/install/ros2launch:/home/jaboy/ros2_humble/install/ros2pkg:/home/jaboy/ros2_humble/install/ros2node:/home/jaboy/ros2_humble/install/ros2multicast:/home/jaboy/ros2_humble/install/ros2interface:/home/jaboy/ros2_humble/install/ros2doctor:/home/jaboy/ros2_humble/install/ros2action:/home/jaboy/ros2_humble/install/ros2cli:/home/jaboy/ros2_humble/install/quality_of_service_demo_py:/home/jaboy/ros2_humble/install/lifecycle_py:/home/jaboy/ros2_humble/install/launch_testing_ros:/home/jaboy/ros2_humble/install/launch_ros:/home/jaboy/ros2_humble/install/examples_rclpy_pointcloud_publisher:/home/jaboy/ros2_humble/install/examples_rclpy_minimal_subscriber:/home/jaboy/ros2_humble/install/examples_rclpy_minimal_service:/home/jaboy/ros2_humble/install/examples_rclpy_minimal_publisher:/home/jaboy/ros2_humble/install/examples_rclpy_minimal_client:/home/jaboy/ros2_humble/install/examples_rclpy_minimal_action_server:/home/jaboy/ros2_humble/install/examples_rclpy_minimal_action_client:/home/jaboy/ros2_humble/install/examples_rclpy_guard_conditions:/home/jaboy/ros2_humble/install/examples_rclpy_executors:/home/jaboy/ros2_humble/install/demo_nodes_py:/home/jaboy/ros2_humble/install/camera_info_manager_py:/home/jaboy/ros2_humble/install/action_tutorials_py:/home/jaboy/ros2_humble/install/ament_uncrustify:/home/jaboy/ros2_humble/install/tracetools_trace:/home/jaboy/ros2_humble/install/tracetools_read:/home/jaboy/ros2_humble/install/rclcpp_lifecycle:/home/jaboy/ros2_humble/install/examples_rclcpp_cbg_executor:/home/jaboy/ros2_humble/install/test_tracetools_launch:/home/jaboy/ros2_humble/install/test_launch_ros:/home/jaboy/ros2_humble/install/sensor_msgs_py:/home/jaboy/ros2_humble/install/rpyutils:/home/jaboy/ros2_humble/install/rosidl_runtime_py:/home/jaboy/ros2_humble/install/rosidl_cli:/home/jaboy/ros2_humble/install/launch_pytest:/home/jaboy/ros2_humble/install/launch_testing:/home/jaboy/ros2_humble/install/launch_yaml:/home/jaboy/ros2_humble/install/launch_xml:/home/jaboy/ros2_humble/install/launch:/home/jaboy/ros2_humble/install/osrf_pycommon:/home/jaboy/ros2_humble/install/domain_coordinator:/home/jaboy/ros2_humble/install/ament_xmllint:/home/jaboy/ros2_humble/install/ament_pyflakes:/home/jaboy/ros2_humble/install/ament_pycodestyle:/home/jaboy/ros2_humble/install/ament_pep257:/home/jaboy/ros2_humble/install/ament_pclint:/home/jaboy/ros2_humble/install/ament_package:/home/jaboy/ros2_humble/install/ament_mypy:/home/jaboy/ros2_humble/install/ament_lint_cmake:/home/jaboy/ros2_humble/install/ament_flake8:/home/jaboy/ros2_humble/install/ament_copyright:/home/jaboy/ros2_humble/install/ament_lint:/home/jaboy/ros2_humble/install/ament_index_python:/home/jaboy/ros2_humble/install/ament_cpplint:/home/jaboy/ros2_humble/install/ament_cppcheck:/home/jaboy/ros2_humble/install/ament_clang_tidy:/home/jaboy/ros2_humble/install/ament_clang_format:/home/jaboy/ros2_ws/install/launch_testing_examples:/home/jaboy/ros2_ws/install/examples_rclpy_pointcloud_publisher:/home/jaboy/ros2_ws/install/examples_rclpy_minimal_subscriber:/home/jaboy/ros2_ws/install/examples_rclpy_minimal_service:/home/jaboy/ros2_ws/install/examples_rclpy_minimal_publisher:/home/jaboy/ros2_ws/install/examples_rclpy_minimal_client:/home/jaboy/ros2_ws/install/examples_rclpy_minimal_action_server:/home/jaboy/ros2_ws/install/examples_rclpy_minimal_action_client:/home/jaboy/ros2_ws/install/examples_rclpy_guard_conditions:/home/jaboy/ros2_ws/install/examples_rclpy_executors:/opt/ros/humble /usr/bin/cmake --build /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/inverse_kin -- -j16 -l16
+[1.097s] [  1%] [34m[1mGenerating C code for ROS interfaces[0m
+[1.098s] [  3%] [34m[1mGenerating C++ code for ROS interfaces[0m
+[1.098s] [  3%] Built target ament_cmake_python_copy_inverse_kin
+[1.098s] running egg_info
+[1.098s] creating inverse_kin.egg-info
+[1.098s] writing inverse_kin.egg-info/PKG-INFO
+[1.098s] writing dependency_links to inverse_kin.egg-info/dependency_links.txt
+[1.099s] writing top-level names to inverse_kin.egg-info/top_level.txt
+[1.099s] writing manifest file 'inverse_kin.egg-info/SOURCES.txt'
+[1.099s] reading manifest file 'inverse_kin.egg-info/SOURCES.txt'
+[1.100s] writing manifest file 'inverse_kin.egg-info/SOURCES.txt'
+[1.100s] [  3%] Built target ament_cmake_python_build_inverse_kin_egg
+[1.100s] [  3%] Built target inverse_kin__cpp
+[1.100s] [  9%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_c.dir/rosidl_generator_c/inverse_kin/msg/detail/inv_kin__functions.c.o[0m
+[1.100s] [  9%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_c.dir/rosidl_generator_c/inverse_kin/srv/detail/add_three_ints__functions.c.o[0m
+[1.100s] [  9%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_c.dir/rosidl_generator_c/inverse_kin/msg/detail/sphere__functions.c.o[0m
+[1.100s] [  9%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_c.dir/rosidl_generator_c/inverse_kin/srv/detail/inv_kin__functions.c.o[0m
+[1.100s] [ 11%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_c.dir/rosidl_generator_c/inverse_kin/msg/detail/num__functions.c.o[0m
+[1.100s] [ 12%] [34m[1mGenerating C++ type support dispatch for ROS interfaces[0m
+[1.100s] [ 14%] [34m[1mGenerating C++ type support for eProsima Fast-RTPS[0m
+[1.101s] [ 15%] [34m[1mGenerating C++ introspection for ROS interfaces[0m
+[1.101s] [ 17%] [32m[1mLinking C shared library libinverse_kin__rosidl_generator_c.so[0m
+[1.101s] [ 17%] Built target inverse_kin__rosidl_generator_c
+[1.101s] [ 22%] [34m[1mGenerating C type support for eProsima Fast-RTPS[0m
+[1.101s] [ 22%] [34m[1mGenerating C introspection for ROS interfaces[0m
+[1.101s] [ 22%] [34m[1mGenerating C type support dispatch for ROS interfaces[0m
+[1.386s] [ 23%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/inverse_kin/srv/add_three_ints__type_support.cpp.o[0m
+[1.388s] [ 25%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/inverse_kin/msg/num__type_support.cpp.o[0m
+[1.389s] [ 26%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/inverse_kin/msg/sphere__type_support.cpp.o[0m
+[1.389s] [ 28%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/inverse_kin/msg/inv_kin__type_support.cpp.o[0m
+[1.389s] [ 30%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/inverse_kin/srv/inv_kin__type_support.cpp.o[0m
+[1.607s] [ 31%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/inverse_kin/msg/detail/num__type_support.cpp.o[0m
+[1.608s] [ 33%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/inverse_kin/msg/detail/inv_kin__type_support.cpp.o[0m
+[1.610s] [ 34%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/inverse_kin/srv/detail/add_three_ints__type_support.cpp.o[0m
+[1.628s] [ 36%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/inverse_kin/msg/detail/sphere__type_support.cpp.o[0m
+[1.639s] [ 38%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/inverse_kin/srv/detail/inv_kin__type_support.cpp.o[0m
+[1.655s] [ 39%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/inverse_kin/msg/detail/dds_fastrtps/num__type_support.cpp.o[0m
+[1.673s] [ 42%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/inverse_kin/msg/detail/dds_fastrtps/inv_kin__type_support.cpp.o[0m
+[1.675s] [ 42%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/inverse_kin/msg/detail/dds_fastrtps/sphere__type_support.cpp.o[0m
+[1.947s] [ 44%] [32m[1mLinking CXX shared library libinverse_kin__rosidl_typesupport_cpp.so[0m
+[2.044s] [ 46%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/inverse_kin/srv/detail/dds_fastrtps/inv_kin__type_support.cpp.o[0m
+[2.047s] [ 47%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/inverse_kin/srv/detail/dds_fastrtps/add_three_ints__type_support.cpp.o[0m
+[2.057s] [ 49%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_c.dir/rosidl_typesupport_c/inverse_kin/msg/sphere__type_support.cpp.o[0m
+[2.077s] [ 50%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_c.dir/rosidl_typesupport_c/inverse_kin/msg/num__type_support.cpp.o[0m
+[2.102s] [ 52%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_c.dir/rosidl_typesupport_c/inverse_kin/msg/inv_kin__type_support.cpp.o[0m
+[2.178s] [ 52%] Built target inverse_kin__rosidl_typesupport_cpp
+[2.184s] [ 53%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_c.dir/rosidl_typesupport_c/inverse_kin/srv/inv_kin__type_support.cpp.o[0m
+[2.195s] [ 55%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/inverse_kin/msg/detail/sphere__type_support.c.o[0m
+[2.205s] [ 57%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/inverse_kin/msg/detail/num__type_support.c.o[0m
+[2.225s] [ 58%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_c.dir/rosidl_typesupport_c/inverse_kin/srv/add_three_ints__type_support.cpp.o[0m
+[2.257s] [ 60%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/inverse_kin/msg/detail/inv_kin__type_support.c.o[0m
+[2.291s] [ 61%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/inverse_kin/srv/detail/inv_kin__type_support.c.o[0m
+[2.318s] [ 63%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/inverse_kin/srv/detail/add_three_ints__type_support.c.o[0m
+[2.338s] [ 65%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/inverse_kin/msg/detail/sphere__type_support_c.cpp.o[0m
+[2.342s] [ 66%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/inverse_kin/msg/detail/num__type_support_c.cpp.o[0m
+[2.359s] [ 68%] [32m[1mLinking CXX shared library libinverse_kin__rosidl_typesupport_c.so[0m
+[2.368s] [ 69%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/inverse_kin/msg/detail/inv_kin__type_support_c.cpp.o[0m
+[2.384s] [ 71%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/inverse_kin/srv/detail/inv_kin__type_support_c.cpp.o[0m
+[2.394s] [ 73%] [32mBuilding CXX object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/inverse_kin/srv/detail/add_three_ints__type_support_c.cpp.o[0m
+[2.433s] [ 74%] [32m[1mLinking C shared library libinverse_kin__rosidl_typesupport_introspection_c.so[0m
+[2.436s] [ 76%] [32m[1mLinking CXX shared library libinverse_kin__rosidl_typesupport_introspection_cpp.so[0m
+[2.536s] [ 76%] Built target inverse_kin__rosidl_typesupport_c
+[2.566s] [ 76%] Built target inverse_kin__rosidl_typesupport_introspection_c
+[2.628s] [ 76%] Built target inverse_kin__rosidl_typesupport_introspection_cpp
+[2.738s] [ 77%] [32m[1mLinking CXX shared library libinverse_kin__rosidl_typesupport_fastrtps_cpp.so[0m
+[2.849s] [ 79%] [32m[1mLinking CXX shared library libinverse_kin__rosidl_typesupport_fastrtps_c.so[0m
+[2.856s] [ 79%] Built target inverse_kin__rosidl_typesupport_fastrtps_cpp
+[2.955s] [ 79%] Built target inverse_kin__rosidl_typesupport_fastrtps_c
+[3.014s] [ 79%] Built target inverse_kin
+[3.072s] [ 80%] [34m[1mGenerating Python code for ROS interfaces[0m
+[3.787s] [ 80%] Built target inverse_kin__py
+[3.845s] [ 88%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_py.dir/rosidl_generator_py/inverse_kin/msg/_sphere_s.c.o[0m
+[3.845s] [ 88%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_py.dir/rosidl_generator_py/inverse_kin/msg/_inv_kin_s.c.o[0m
+[3.846s] [ 88%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_py.dir/rosidl_generator_py/inverse_kin/srv/_inv_kin_s.c.o[0m
+[3.846s] [ 88%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_py.dir/rosidl_generator_py/inverse_kin/srv/_add_three_ints_s.c.o[0m
+[3.846s] [ 88%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_generator_py.dir/rosidl_generator_py/inverse_kin/msg/_num_s.c.o[0m
+[3.971s] [ 90%] [32m[1mLinking C shared library rosidl_generator_py/inverse_kin/libinverse_kin__rosidl_generator_py.so[0m
+[4.051s] [ 90%] Built target inverse_kin__rosidl_generator_py
+[4.107s] [ 95%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/inverse_kin/_inverse_kin_s.ep.rosidl_typesupport_introspection_c.c.o[0m
+[4.107s] [ 95%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/inverse_kin/_inverse_kin_s.ep.rosidl_typesupport_c.c.o[0m
+[4.107s] [ 95%] [32mBuilding C object CMakeFiles/inverse_kin__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/inverse_kin/_inverse_kin_s.ep.rosidl_typesupport_fastrtps_c.c.o[0m
+[4.238s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/inverse_kin/inverse_kin_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.238s] [ 98%] [32m[1mLinking C shared library rosidl_generator_py/inverse_kin/inverse_kin_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.238s] [100%] [32m[1mLinking C shared library rosidl_generator_py/inverse_kin/inverse_kin_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so[0m
+[4.313s] [100%] Built target inverse_kin__rosidl_typesupport_c__pyext
+[4.314s] [100%] Built target inverse_kin__rosidl_typesupport_introspection_c__pyext
+[4.314s] [100%] Built target inverse_kin__rosidl_typesupport_fastrtps_c__pyext
