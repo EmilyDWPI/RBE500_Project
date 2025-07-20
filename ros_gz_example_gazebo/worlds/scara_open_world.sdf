@@ -1,4 +1,9 @@
 <?xml version='1.0' ?>
+
+<!-- Try with no space between dashes - -once
+    ros2 topic pub - -once /scara/arm_wrist_lift_joint_effort_controller/command std_msgs/msg/Float64 '{data: -0.01}' 
+-->
+
 <sdf version='1.6'>
     <world name='scara_world'>
         <plugin

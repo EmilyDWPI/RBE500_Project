@@ -244,7 +244,7 @@
             <child>arm_shoulder_pan</child>
             <axis>
                 <dynamics>
-                    <damping>1.000000</damping>
+                    <damping>0.010000</damping>
                     <friction>0.000000</friction>
                 </dynamics>
                 <limit>
@@ -260,7 +260,7 @@
             <child>arm_elbow_pan</child>
             <axis>
                 <dynamics>
-                    <damping>1.000000</damping>
+                    <damping>0.010000</damping>
                     <friction>0.000000</friction>
                 </dynamics>
                 <limit>
@@ -278,7 +278,7 @@
             <child>arm_wrist_lift</child>
             <axis>
                 <dynamics>
-                    <damping>0.0001</damping>
+                    <damping>0.01</damping>
                 </dynamics>
                 <limit>
                     <lower>-0.8</lower>

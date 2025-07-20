@@ -9,10 +9,10 @@ class MinimalClientAsync(Node):
     def __init__(self):
         super().__init__('control_client_async')
         
-        self.cli = self.create_client(Control, 'control')       # CHANGE
+        self.cli = self.create_client(Control, 'control')     
         while not self.cli.wait_for_service(timeout_sec=1.0):
             self.get_logger().info('service not available, waiting again...')
-        self.req = Control.Request()                                   # CHANGE
+        self.req = Control.Request()                                
 
     def send_request(self):
         self.req.joint_name = str(sys.argv[1])

@@ -8,6 +8,7 @@ from rclpy.node import Node
 
 from std_msgs.msg import String
 from std_msgs.msg import Float32MultiArray
+from std_msgs.msg import Float64
 import numpy as np
 from numpy import cos, sin, deg2rad, rad2deg, pi, sqrt, arctan2
 from sensor_msgs.msg import JointState
@@ -31,6 +32,7 @@ class MinimalService(Node):
         self.apply_effort_client = self.create_client(ApplyJointEffort, '/gazebo/apply_joint_effort')  # Gazebo effort application client
         self.timer = None  # Timer for periodic updates
         self.active_request = None  # Track the active request
+        self.effort_pubs = {}  # Cache for publishers
 
         # Subscribe to joint_states topic
         self.subscription = self.create_subscription(
@@ -80,6 +82,12 @@ class MinimalService(Node):
         print(response)
         return response
     
+    def get_effort_pub(self, joint_name):
+        topic = f"/scara/{joint_name}_effort_controller/command"
+        if topic not in self.effort_pubs:
+            self.effort_pubs[topic] = self.create_publisher(Float64, topic, 10)
+        return self.effort_pubs[topic]
+
     def apply_pd_effort(self):
         if self.active_request is None:
             return
@@ -101,7 +109,7 @@ class MinimalService(Node):
         error_dot = (error - self.last_error) / dt  # Derivative of error
 
         # PD controller parameters
-        Kd = 0.001  # Derivative gain
+        Kd = 0.256  # Derivative gain
         Kp = 0.4/3  # Proportional gain
         ts = 3 # time to reach the goal
         J = 0.1 # Link inertia
@@ -109,14 +117,11 @@ class MinimalService(Node):
 
         effort = Kp * error + Kd * error_dot #Can't consider the system here. The input(effort) is our controller output
 
-        effort_req = ApplyJointEffort.Request()
-        effort_req.joint_name = self.active_request.joint_name
-        effort_req.effort = effort
-        effort_req.start_time.sec = 0
-        effort_req.start_time.nanosec = 0
-        effort_req.duration.sec = 0
-        effort_req.duration.nanosec = int(0.05 * 1e9)  # 50ms
-        self.apply_effort_client.call_async(effort_req)
+        # Dynamically get or create the publisher for the requested joint
+        pub = self.get_effort_pub(self.active_request.joint_name)
+        msg = Float64()
+        msg.data = effort
+        pub.publish(msg)
 
         print(f'Applying effort: {effort} for joint: {self.active_request.joint_name} with goal theta: {self.active_request.goal_theta} and current position: {current_position}')
 
