@@ -1,0 +1,20 @@
+[2.112s] Invoking command in '/home/jaboy/Documents/RBE500_Project/RBE500_Project/control': PYTHONPATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/control build --build-base /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/build install --record /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/install.log --single-version-externally-managed install_data
+[2.586s] running egg_info
+[2.587s] writing ../build/control/control.egg-info/PKG-INFO
+[2.587s] writing dependency_links to ../build/control/control.egg-info/dependency_links.txt
+[2.587s] writing entry points to ../build/control/control.egg-info/entry_points.txt
+[2.587s] writing requirements to ../build/control/control.egg-info/requires.txt
+[2.588s] writing top-level names to ../build/control/control.egg-info/top_level.txt
+[2.589s] reading manifest file '../build/control/control.egg-info/SOURCES.txt'
+[2.590s] writing manifest file '../build/control/control.egg-info/SOURCES.txt'
+[2.590s] running build
+[2.591s] running build_py
+[2.591s] running install
+[2.591s] running install_lib
+[2.595s] running install_data
+[2.595s] running install_egg_info
+[2.598s] removing '/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info' (and everything under it)
+[2.599s] Copying ../build/control/control.egg-info to /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info
+[2.600s] running install_scripts
+[2.622s] interrupted
+[2.658s] Invoked command in '/home/jaboy/Documents/RBE500_Project/RBE500_Project/control' returned '1': PYTHONPATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/control build --build-base /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/build install --record /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/install.log --single-version-externally-managed install_data

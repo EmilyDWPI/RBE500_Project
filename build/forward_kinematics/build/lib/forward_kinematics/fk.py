@@ -26,7 +26,7 @@ class MinimalSubscriber(Node):
 
     def pose_call(self, msg):   
     
-        self.joint_states = msg;
+        self.joint_states = msg
         
     #Function to Calculate Transform
         def xfrm(theta, d, a, alpha):

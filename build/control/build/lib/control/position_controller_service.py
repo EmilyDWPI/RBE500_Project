@@ -14,6 +14,9 @@ from sensor_msgs.msg import JointState
 from geometry_msgs.msg import Pose 
 from scipy.spatial.transform import Rotation as R
 
+from gazebo_msgs.srv import ApplyJointEffort  # Gazebo service to apply joint effort
+import time
+
 
 class MinimalService(Node):
 
@@ -21,6 +24,13 @@ class MinimalService(Node):
         super().__init__('control_service')
         self.srv = self.create_service(Control, 'control', self.control_callback)
         self.joint_states = None  # Store latest JointState message
+
+        #derivative calculation variables
+        self.last_error = 0.0  # Initialize last error
+        self.last_time = self.get_clock().now()  # Initialize last time
+        self.apply_effort_client = self.create_client(ApplyJointEffort, '/gazebo/apply_joint_effort')  # Gazebo effort application client
+        self.timer = None  # Timer for periodic updates
+        self.active_request = None  # Track the active request
 
         # Subscribe to joint_states topic
         self.subscription = self.create_subscription(
@@ -34,26 +44,17 @@ class MinimalService(Node):
         self.joint_states = msg
 
     def control_callback(self, request, response):   
-        # https://docs.ros.org/en/kinetic/api/gazebo_msgs/html/srv/ApplyJointEffort.html        response.
-        # Lets make a program to take a difference in angle, and goes there with a PD controller
-        # First we need the angle difference
-        # Then we run it through our transfer function
-        # Then using the /gazebo_msgs/ApplyJointEffort topic, we apply torque to the joint in the controlled fashion           
-        # This should constantly apply a torque based on the difference of current theta and desired theta
-        # Hence, this will be a recursive service
-        Kd = 0.001  # Derivative gain
-        Kp = 0.4/3  # Proportional gain
-        ts = 3 # time to reach the goal
-        J = 0.1 # Link inertia
-        b = 1 # Link damping
 
+        self.active_request = request  # Store the active request
+
+        # Check if joint_states has been received
         if self.joint_states is None:
             self.get_logger().warn('No joint states received yet.')
             response.effort = 0.0
             response.joint_name = request.joint_name
             return response
 
-        # Find the index of the requested joint
+        # Find the index of the requested joint and position
         try:
             idx = self.joint_states.name.index(request.joint_name)
             current_position = self.joint_states.position[idx]
@@ -63,16 +64,70 @@ class MinimalService(Node):
             response.joint_name = request.joint_name
             return response
         
-        error = request.goal_theta - current_position
+        # The error between the current arm theta and the goal theta
+        error = self.active_request.goal_theta - current_position
+
+        if self.timer is not None:
+            self.timer.cancel()
+        self.timer = self.create_timer(0.05, self.apply_pd_effort) # 20hz update of joint effort
 
         self.get_logger().info(
-            f'Incoming request\n Joint name: {request.joint_name} Goal Theta: {request.goal_theta} Current Theta: {current_position} Error: {error}'
+            f'Incoming request\n Joint name: {self.active_request.joint_name} Goal Theta: {self.active_request.goal_theta} Current Theta: {current_position} Error: {error}'
         )
-        response.effort = (Kp + Kd)/(J + (b+Kd) + Kp)  # Example, update as needed
-        response.joint_name = request.joint_name
+
+        #response.joint_name = request.joint_name
 
         print(response)
         return response
+    
+    def apply_pd_effort(self):
+        if self.active_request is None:
+            return
+        
+        try:
+            idx = self.joint_states.name.index(self.active_request.joint_name)
+            current_position = self.joint_states.position[idx]
+        except ValueError:
+            self.get_logger().warn(f'Joint {self.active_request.joint_name} not found in joint_states.')
+            return
+        
+        # Take current time and take change in time
+        now = self.get_clock().now()
+        dt = (now - self.last_time).nanoseconds * 1e-9
+        if dt == 0: # If there was no change in time, skip the update
+            return
+        
+        error = self.active_request.goal_theta - current_position
+        error_dot = (error - self.last_error) / dt  # Derivative of error
+
+        # PD controller parameters
+        Kd = 0.001  # Derivative gain
+        Kp = 0.4/3  # Proportional gain
+        ts = 3 # time to reach the goal
+        J = 0.1 # Link inertia
+        b = 1 # Link damping
+
+        effort = Kp * error + Kd * error_dot #Can't consider the system here. The input(effort) is our controller output
+
+        effort_req = ApplyJointEffort.Request()
+        effort_req.joint_name = self.active_request.joint_name
+        effort_req.effort = effort
+        effort_req.start_time.sec = 0
+        effort_req.start_time.nanosec = 0
+        effort_req.duration.sec = 0
+        effort_req.duration.nanosec = int(0.05 * 1e9)  # 50ms
+        self.apply_effort_client.call_async(effort_req)
+
+        print(f'Applying effort: {effort} for joint: {self.active_request.joint_name} with goal theta: {self.active_request.goal_theta} and current position: {current_position}')
+
+        
+        self.last_error = error  # Update last error
+        self.last_time = now  # Update last time
+
+        if abs(error) < 0.01:
+            self.get_logger().info(f'Joint {self.active_request.joint_name} has reached approximately the goal position [{self.active_request.goal_theta}] measured at [{current_position}]. Stopping effort application.')
+            self.timer.cancel()
+            self.active_request = None
 
 def main(args=None):
     rclpy.init(args=args)

@@ -42,7 +42,7 @@ def main():
                     'Service call failed %r' % (e,))
             else:
                 control_client.get_logger().info(
-                    'Resultant effort: for joint: %s  and goal theta: %f is %f' %
+                    'Resultant effort for joint: %s and goal theta: %f is: %f' %
                     (str(sys.argv[1]), float(sys.argv[2]), float(response.effort)))
             break
 

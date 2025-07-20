@@ -14,7 +14,7 @@ setup(
     install_requires=['setuptools'],
     zip_safe=True,
     maintainer='jaboy',
-    maintainer_email='jasonakuehne@gmail.com',
+    maintainer_email='jkuehne@wpi.edu',
     description='PD controller for RBE500',
     license='Apache-2.0',
     tests_require=['pytest'],

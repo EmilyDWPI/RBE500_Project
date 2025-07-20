@@ -1,5 +1,5 @@
 <?xml version='1.0' ?>
-<sdf version='1.8'>
+<sdf version='1.6'>
 
     <model name='scara' canonical_link='arm_base'>
         <pose>0 0 0 0 0 0</pose>
@@ -239,7 +239,7 @@
                 </material>
             </visual>
         </link>
-        <joint name='arm_shoulder_pan_joint' type='fixed'> <!-- fixed for part 2, usually revolute -->
+        <joint name='arm_shoulder_pan_joint' type='revolute'> <!-- fixed for part 2, usually revolute -->
             <parent>arm_base</parent>
             <child>arm_shoulder_pan</child>
             <axis>
@@ -266,23 +266,24 @@
                 <limit>
                     <lower>-2.999994</lower>
                     <upper>2.999994</upper>
+                    <effort>1e6</effort> <!-- Set effort to a high value -->
+                    <velocity>1000.0</velocity> <!-- Set velocity to a high value -->
                 </limit>
                 <xyz>0 0 1</xyz>
                 <use_parent_model_frame>true</use_parent_model_frame>
             </axis>
         </joint>
-        <joint name='arm_wrist_lift_joint' type='fixed'> <!-- fixed for part 2, usually prismatic -->
+        <joint name='arm_wrist_lift_joint' type='prismatic'> <!-- fixed for part 2, usually prismatic -->
             <parent>arm_elbow_pan</parent>
             <child>arm_wrist_lift</child>
             <axis>
                 <dynamics>
-                    <damping>0.1</damping>
-                    <friction>0.0</friction>
+                    <damping>0.0001</damping>
                 </dynamics>
                 <limit>
                     <lower>-0.8</lower>
                     <upper>0.1</upper>
-                    <effort>inf</effort>      <!-- Set effort to infinity -->
+                    <effort>1e10</effort>      <!-- Set effort very high -->
                     <!-- Remove or set velocity to a very high value -->
                     <!-- <velocity>500</velocity> -->
                 </limit>
@@ -290,5 +291,22 @@
                 <use_parent_model_frame>true</use_parent_model_frame>
             </axis>
         </joint>
+
+        <plugin
+            filename="ignition-gazebo-apply-joint-force-system"
+            name="gz::sim::systems::ApplyJointForce">
+            <joint_name>arm_wrist_lift_joint</joint_name>
+        </plugin>
+        <plugin
+            filename="ignition-gazebo-apply-joint-force-system"
+            name="gz::sim::systems::ApplyJointForce">
+            <joint_name>arm_elbow_pan_joint</joint_name>
+        </plugin>
+        <plugin
+            filename="ignition-gazebo-apply-joint-force-system"
+            name="gz::sim::systems::ApplyJointForce">
+            <joint_name>arm_shoulder_pan_joint</joint_name>
+        </plugin>
+
     </model>
 </sdf>
