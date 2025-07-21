@@ -239,7 +239,7 @@
                 </material>
             </visual>
         </link>
-        <joint name='arm_shoulder_pan_joint' type='revolute'> <!-- fixed for part 2, usually revolute -->
+        <joint name='arm_shoulder_pan_joint' type='fixed'> <!-- fixed for part 2, usually revolute -->
             <parent>arm_base</parent>
             <child>arm_shoulder_pan</child>
             <axis>
@@ -250,6 +250,8 @@
                 <limit>
                     <lower>-2.999994</lower>
                     <upper>2.999994</upper>
+                    <effort>1e6</effort> <!-- Set effort to a high value -->
+                    <velocity>1000.0</velocity> <!-- Set velocity to a high value -->
                 </limit>
                 <xyz>0 0 1</xyz>
                 <use_parent_model_frame>true</use_parent_model_frame>

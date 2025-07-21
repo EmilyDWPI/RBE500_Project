@@ -1,0 +1,47 @@
+[ 50%] Built target BasicSystem
+[100%] Built target FullSystem
+-- Install configuration: ""
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/lib/ros_gz_example_gazebo/libBasicSystem.so
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/lib/ros_gz_example_gazebo/libFullSystem.so
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/log
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/log/latest
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/log/latest_build
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/log/build_2025-07-20_12-28-51
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/log/build_2025-07-20_12-28-51/events.log
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/log/build_2025-07-20_12-28-51/logger_all.log
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/log/COLCON_IGNORE
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/scara_open_world.sdf
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/force_test.sdf
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/build
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/build/.built_by
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/build/COLCON_IGNORE
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/_local_setup_util_ps1.py
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/_local_setup_util_sh.py
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/local_setup.sh
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/local_setup.bash
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/setup.ps1
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/setup.zsh
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/local_setup.ps1
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/setup.bash
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/setup.sh
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/.colcon_install_layout
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/local_setup.zsh
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/install/COLCON_IGNORE
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/worlds/diff_drive.sdf
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/environment/ros_gz_example_gazebo.dsv
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/environment/ros_gz_example_gazebo.sh
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ament_index/resource_index/package_run_dependencies/ros_gz_example_gazebo
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ament_index/resource_index/parent_prefix_path/ros_gz_example_gazebo
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/environment/ament_prefix_path.dsv
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/environment/path.dsv
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/local_setup.bash
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/local_setup.sh
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/local_setup.zsh
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/local_setup.dsv
+-- Installing: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/package.dsv
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ament_index/resource_index/packages/ros_gz_example_gazebo
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/cmake/ros_gz_example_gazeboConfig.cmake
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/cmake/ros_gz_example_gazeboConfig-version.cmake
+-- Up-to-date: /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/ros_gz_example_gazebo/share/ros_gz_example_gazebo/package.xml

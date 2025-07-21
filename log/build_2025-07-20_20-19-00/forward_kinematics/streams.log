@@ -1,0 +1,22 @@
+[2.524s] Invoking command in '/home/jaboy/Documents/RBE500_Project/RBE500_Project/forward_kinematics': PYTHONPATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/forward_kinematics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/forward_kinematics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/forward_kinematics build --build-base /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/forward_kinematics/build install --record /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/forward_kinematics/install.log --single-version-externally-managed install_data
+[3.110s] running egg_info
+[3.111s] writing ../build/forward_kinematics/forward_kinematics.egg-info/PKG-INFO
+[3.111s] writing dependency_links to ../build/forward_kinematics/forward_kinematics.egg-info/dependency_links.txt
+[3.111s] writing entry points to ../build/forward_kinematics/forward_kinematics.egg-info/entry_points.txt
+[3.111s] writing requirements to ../build/forward_kinematics/forward_kinematics.egg-info/requires.txt
+[3.111s] writing top-level names to ../build/forward_kinematics/forward_kinematics.egg-info/top_level.txt
+[3.113s] reading manifest file '../build/forward_kinematics/forward_kinematics.egg-info/SOURCES.txt'
+[3.113s] adding license file 'LICENSE'
+[3.113s] writing manifest file '../build/forward_kinematics/forward_kinematics.egg-info/SOURCES.txt'
+[3.114s] running build
+[3.114s] running build_py
+[3.114s] running install
+[3.114s] running install_lib
+[3.120s] running install_data
+[3.120s] running install_egg_info
+[3.121s] removing '/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/forward_kinematics/lib/python3.10/site-packages/forward_kinematics-0.0.0-py3.10.egg-info' (and everything under it)
+[3.122s] Copying ../build/forward_kinematics/forward_kinematics.egg-info to /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/forward_kinematics/lib/python3.10/site-packages/forward_kinematics-0.0.0-py3.10.egg-info
+[3.123s] running install_scripts
+[3.161s] Installing pose_pub script to /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/forward_kinematics/lib/forward_kinematics
+[3.161s] writing list of installed files to '/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/forward_kinematics/install.log'
+[3.193s] Invoked command in '/home/jaboy/Documents/RBE500_Project/RBE500_Project/forward_kinematics' returned '0': PYTHONPATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/forward_kinematics/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/forward_kinematics/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/forward_kinematics build --build-base /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/forward_kinematics/build install --record /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/forward_kinematics/install.log --single-version-externally-managed install_data

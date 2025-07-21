@@ -42,6 +42,9 @@ class MinimalService(Node):
             10
         )
 
+        self.position_log = []  # Store (timestamp, position) tuples
+        self.log_written = False  # Flag to avoid writing multiple times
+
     def joint_states_callback(self, msg):
         self.joint_states = msg
 
@@ -108,14 +111,27 @@ class MinimalService(Node):
         error = self.active_request.goal_theta - current_position
         error_dot = (error - self.last_error) / dt  # Derivative of error
 
-        # PD controller parameters
-        Kd = 0.256  # Derivative gain
-        Kp = 0.4/3  # Proportional gain
+        # PD controller parameters. 
+        if(self.active_request.joint_name == 'arm_shoulder_pan_joint'):
+            Kd = 0.0256  # Derivative gain
+            Kp = 0.1  # Proportional gain
+            effort = Kp * error + Kd * error_dot #Can't consider the system here. The input(effort) is our controller output
+        elif(self.active_request.joint_name == 'arm_elbow_pan_joint'):
+            Kd = 0.14
+            Kp = 0.10
+            effort = Kp * error + Kd * error_dot 
+        elif(self.active_request.joint_name == 'arm_wrist_lift_joint'):
+            Kd = 0.0012
+            Kp = 0.018
+            effort = Kp * error + Kd * error_dot + (0.001 * 9.81)  # Adding a constant to counteract gravity (mass times gravity)
+        else:
+            self.get_logger().warn(f'Unknown joint name: {self.active_request.joint_name}')
+            return
         ts = 3 # time to reach the goal
         J = 0.1 # Link inertia
         b = 1 # Link damping
 
-        effort = Kp * error + Kd * error_dot #Can't consider the system here. The input(effort) is our controller output
+        # Effort unit is in Newtons
 
         # Dynamically get or create the publisher for the requested joint
         pub = self.get_effort_pub(self.active_request.joint_name)
@@ -129,10 +145,13 @@ class MinimalService(Node):
         self.last_error = error  # Update last error
         self.last_time = now  # Update last time
 
-        if abs(error) < 0.01:
-            self.get_logger().info(f'Joint {self.active_request.joint_name} has reached approximately the goal position [{self.active_request.goal_theta}] measured at [{current_position}]. Stopping effort application.')
-            self.timer.cancel()
-            self.active_request = None
+        if abs(error) < 0.002:
+            # This can cause problems due to lack of checking variables. Lets just continue the loop for now unless direct stopping is needed.
+            # This also accounts for what exterior forces may do on a joint, such as gravity for the wrist lift joint
+            # self.get_logger().info(f'Joint {self.active_request.joint_name} has reached approximately the goal position [{self.active_request.goal_theta}] measured at [{current_position}]. Stopping effort application.')
+            # self.timer.cancel()
+            # self.active_request = None
+            pass
 
 def main(args=None):
     rclpy.init(args=args)
