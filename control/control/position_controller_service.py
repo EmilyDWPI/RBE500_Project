@@ -153,6 +153,18 @@ class MinimalService(Node):
             # self.active_request = None
             pass
 
+        if abs(error) < 0.002 and not self.log_written:
+            with open("joint_position_log.txt", "w") as f:
+                for t, pos in self.position_log:
+                    f.write(f"{t:.3f},{pos:.6f}\n")
+            self.log_written = True
+            self.get_logger().info("Joint position log written to joint_position_log.txt")
+
+        now = self.get_clock().now()
+        timestamp = now.nanoseconds * 1e-9  # seconds
+
+        self.position_log.append((timestamp, current_position))
+
 def main(args=None):
     rclpy.init(args=args)
 

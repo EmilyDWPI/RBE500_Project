@@ -1,0 +1,25 @@
+[2.248s] Invoking command in '/home/jaboy/Documents/RBE500_Project/RBE500_Project/control': PYTHONPATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/control build --build-base /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/build install --record /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/install.log --single-version-externally-managed install_data
+[2.807s] running egg_info
+[2.808s] writing ../build/control/control.egg-info/PKG-INFO
+[2.808s] writing dependency_links to ../build/control/control.egg-info/dependency_links.txt
+[2.808s] writing entry points to ../build/control/control.egg-info/entry_points.txt
+[2.808s] writing requirements to ../build/control/control.egg-info/requires.txt
+[2.809s] writing top-level names to ../build/control/control.egg-info/top_level.txt
+[2.810s] reading manifest file '../build/control/control.egg-info/SOURCES.txt'
+[2.811s] writing manifest file '../build/control/control.egg-info/SOURCES.txt'
+[2.811s] running build
+[2.811s] running build_py
+[2.812s] copying control/position_controller_service.py -> /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/build/lib/control
+[2.812s] running install
+[2.812s] running install_lib
+[2.813s] copying /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/build/lib/control/position_controller_service.py -> /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages/control
+[2.815s] byte-compiling /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages/control/position_controller_service.py to position_controller_service.cpython-310.pyc
+[2.817s] running install_data
+[2.817s] running install_egg_info
+[2.820s] removing '/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info' (and everything under it)
+[2.821s] Copying ../build/control/control.egg-info to /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages/control-0.0.0-py3.10.egg-info
+[2.822s] running install_scripts
+[2.861s] Installing client script to /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/control
+[2.861s] Installing service script to /home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/control
+[2.861s] writing list of installed files to '/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/install.log'
+[2.902s] Invoked command in '/home/jaboy/Documents/RBE500_Project/RBE500_Project/control' returned '0': PYTHONPATH=/home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/jaboy/Documents/RBE500_Project/RBE500_Project/install/control/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../build/control build --build-base /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/build install --record /home/jaboy/Documents/RBE500_Project/RBE500_Project/build/control/install.log --single-version-externally-managed install_data

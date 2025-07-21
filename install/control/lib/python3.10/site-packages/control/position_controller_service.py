@@ -42,6 +42,9 @@ class MinimalService(Node):
             10
         )
 
+        self.position_log = []  # Store (timestamp, position) tuples
+        self.log_written = False  # Flag to avoid writing multiple times
+
     def joint_states_callback(self, msg):
         self.joint_states = msg
 
@@ -142,10 +145,25 @@ class MinimalService(Node):
         self.last_error = error  # Update last error
         self.last_time = now  # Update last time
 
-        if abs(error) < 0.001:
-            self.get_logger().info(f'Joint {self.active_request.joint_name} has reached approximately the goal position [{self.active_request.goal_theta}] measured at [{current_position}]. Stopping effort application.')
-            self.timer.cancel()
-            self.active_request = None
+        if abs(error) < 0.002:
+            # This can cause problems due to lack of checking variables. Lets just continue the loop for now unless direct stopping is needed.
+            # This also accounts for what exterior forces may do on a joint, such as gravity for the wrist lift joint
+            # self.get_logger().info(f'Joint {self.active_request.joint_name} has reached approximately the goal position [{self.active_request.goal_theta}] measured at [{current_position}]. Stopping effort application.')
+            # self.timer.cancel()
+            # self.active_request = None
+            pass
+
+        if abs(error) < 0.002 and not self.log_written:
+            with open("joint_position_log.txt", "w") as f:
+                for t, pos in self.position_log:
+                    f.write(f"{t:.3f},{pos:.6f}\n")
+            self.log_written = True
+            self.get_logger().info("Joint position log written to joint_position_log.txt")
+
+        now = self.get_clock().now()
+        timestamp = now.nanoseconds * 1e-9  # seconds
+
+        self.position_log.append((timestamp, current_position))
 
 def main(args=None):
     rclpy.init(args=args)
